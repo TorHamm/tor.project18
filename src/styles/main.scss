@@ -1,0 +1,8 @@
+@import "./abstract/colors";
+@import "./abstract/mixins";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "/src/components/Header/header.scss";
+@import "/src/components/Footer/footer.scss";

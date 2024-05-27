@@ -1,0 +1,74 @@
+footer {
+  @include flex-column(0);
+  position: relative;
+  font-family: "Jost", sans-serif;
+  justify-content: flex-end;
+  height: 1005px;
+  .contactCard {
+    @include flex-column(32px);
+    position: absolute;
+    top: 0;
+    padding: 64px 24px;
+    margin: 0 24px;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    background: $primary-orange
+      url("/assets/shared/desktop/bg-pattern-call-to-action.svg") no-repeat -230px
+      center;
+    .text {
+      @include flex-column(6px);
+      h1 {
+        font-size: 32px;
+        line-height: 32px;
+        height: 82px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 25px;
+      }
+    }
+    button {
+      height: 56px;
+      width: 152px;
+      border-radius: 8px;
+      border: none;
+    }
+  }
+  .container {
+    @include flex-column(40px);
+    padding: 64px 24px;
+    padding-top: 217px;
+    align-items: center;
+    text-align: center;
+    background-color: $black;
+    .logo-link {
+      @include flex-column(32px);
+      align-items: center;
+      width: 100%;
+
+      hr {
+        margin: 0;
+        height: 1px;
+        width: 100%;
+        border: none;
+        background-color: $grey-1;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    .contact {
+      @include flex-column(40px);
+      color: #8f8f8e;
+      b {
+        font-weight: 500;
+      }
+      .socialLink {
+        @include flex-row(16px);
+      }
+    }
+  }
+}
