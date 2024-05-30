@@ -4,5 +4,10 @@
 @import "./base/reset";
 @import "./base/typography";
 
-@import "/src/components/Header/header.scss";
-@import "/src/components/Footer/footer.scss";
+@import "/src/components/Header/header";
+@import "/src/components/Main/main";
+@import "/src/components/Footer/footer";
+
+@import "/src/app/homePage";
+@import "/src/app/designPage/[designType]/designPage";
+@import "/src/app/about-us/aboutUs";

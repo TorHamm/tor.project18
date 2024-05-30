@@ -1,0 +1,88 @@
+@mixin cardImg($url) {
+  &::before {
+    z-index: 1;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0.4;
+    background: url($url) no-repeat center/cover;
+  }
+}
+
+main {
+  .hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    background-color: $primary-orange;
+    .title {
+      @include flex-column(24px);
+      align-items: center;
+      padding: 80px 24px;
+      .text {
+        @include flex-column(14px);
+      }
+      p {
+        font-size: 15px;
+        line-height: 25px;
+      }
+    }
+  }
+  .container {
+    @include flex-column(120px);
+    text-align: center;
+    padding: 120px 24px;
+    .projectLink {
+      @include flex-column(24px);
+      .link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: white;
+        height: 250px;
+        border-radius: 15px;
+        background-color: black;
+        .text {
+          @include flex-column(12px);
+          h2,
+          p {
+            z-index: 1;
+            position: relative;
+            &::before {
+              background: none;
+            }
+          }
+          p {
+            @include flex-row(16px);
+            letter-spacing: 5px;
+            align-items: center;
+            justify-content: center;
+            &::after {
+              content: " ";
+              display: inline-block;
+              width: 4px;
+              height: 8px;
+              background: url("/assets/shared/desktop/icon-right-arrow.svg")
+                no-repeat center;
+            }
+          }
+        }
+      }
+      .web {
+        @include cardImg("/assets/home/mobile/image-web-design.jpg");
+      }
+      .app {
+        @include cardImg("/assets/home/mobile/image-app-design.jpg");
+      }
+      .graphic {
+        @include cardImg("/assets/home/mobile/image-graphic-design.jpg");
+      }
+    }
+  }
+}

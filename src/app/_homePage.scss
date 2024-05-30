@@ -1,0 +1,29 @@
+main {
+  .mainPageHero {
+    padding-bottom: 370px;
+    button {
+      height: 56px;
+      width: 152px;
+      border-radius: 8px;
+      border: none;
+    }
+    .phoneImg-mainpage {
+      pointer-events: none;
+      position: absolute;
+      left: -123px;
+      top: 284px;
+    }
+  }
+  .container {
+    .companyStrength {
+      @include flex-column(80px);
+      .section {
+        @include flex-column(48px);
+        align-items: center;
+        .text {
+          @include flex-column(32px);
+        }
+      }
+    }
+  }
+}

@@ -3,14 +3,17 @@ header {
   justify-content: center;
   height: 96px;
   font-family: "Jost", sans-serif;
+  overflow: hidden;
   nav {
     @include flex-row(100px);
     align-items: center;
     width: 325px;
     .menuIcon {
+      cursor: pointer;
       transition: 0s;
     }
     .menu {
+      z-index: 999;
       @include flex-column(32px);
       position: absolute;
       top: 96px;

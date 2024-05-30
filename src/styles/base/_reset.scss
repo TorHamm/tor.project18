@@ -94,6 +94,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 
 /* make sure to set some focus styles for accessibility */
@@ -117,6 +118,7 @@ section {
 }
 
 body {
+  overflow-x: hidden;
   line-height: 1;
 }
 

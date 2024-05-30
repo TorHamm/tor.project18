@@ -20,7 +20,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <header onMouseLeave={() => menuOpen && setMenuOpen(!menuOpen)}>
       <nav>
         <Link href='/'>
           <Image
